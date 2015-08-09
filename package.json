@@ -1,0 +1,27 @@
+{
+  "name": "check-arg-types",
+  "version": "1.0.0",
+  "description": "Pass in `arguments` and an array of the expected types (as string descriptions) and throw if they don't match.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staydecent/check-arg-types.git"
+  },
+  "keywords": [
+    "check",
+    "args",
+    "types",
+    "arguments",
+    "type-checking",
+    "type"
+  ],
+  "author": "Adrian Unger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/staydecent/check-arg-types/issues"
+  },
+  "homepage": "https://github.com/staydecent/check-arg-types#readme"
+}
