@@ -23,4 +23,6 @@ var checkArgTypes = function(args, types) {
   }
 };
 
+checkArgTypes.prototype.toType = toType;
+
 module.exports = checkArgTypes;
