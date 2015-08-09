@@ -16,7 +16,7 @@ var checkArgTypes = function(args, types) {
     expectedType = types[x];
     
     if (givenType !== expectedType) {
-      throw new TypeError("Expected '"+expectedType+"' given '"+givenType+"'");
+      throw new TypeError("Expected '"+expectedType+"' given '"+givenType+"' for argument at index "+x);
     }
 
     x++;
