@@ -4,7 +4,7 @@
   "description": "Pass in `arguments` and an array of the expected types (as string descriptions) and throw if they don't match.",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tape test/*.js | faucet"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/staydecent/check-arg-types#readme",
   "devDependencies": {
+    "faucet": "0.0.1",
     "tape": "^4.0.3"
   }
 }
