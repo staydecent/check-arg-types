@@ -59,3 +59,47 @@ test('toType should handle "json" value', function(t) {
   t.end();
 });
 
+test('toType should handle "int8array" value', function(t) {
+  t.equal('int8array', toType(new Int8Array()));
+  t.end();
+});
+
+test('toType should handle "uint8array" value', function(t) {
+  t.equal('uint8array', toType(new Uint8Array()));
+  t.end();
+});
+
+test('toType should handle "uint8clampedarray" value', function(t) {
+  t.equal('uint8clampedarray', toType(new Uint8ClampedArray()));
+  t.end();
+});
+
+test('toType should handle "int16array" value', function(t) {
+  t.equal('int16array', toType(new Int16Array()));
+  t.end();
+});
+
+test('toType should handle "uint16array" value', function(t) {
+  t.equal('uint16array', toType(new Uint16Array()));
+  t.end();
+});
+
+test('toType should handle "int32array" value', function(t) {
+  t.equal('int32array', toType(new Int32Array()));
+  t.end();
+});
+
+test('toType should handle "uint32array" value', function(t) {
+  t.equal('uint32array', toType(new Uint32Array()));
+  t.end();
+});
+
+test('toType should handle "float32array" value', function(t) {
+  t.equal('float32array', toType(new Float32Array()));
+  t.end();
+});
+
+test('toType should handle "float64array" value', function(t) {
+  t.equal('float64array', toType(new Float64Array()));
+  t.end();
+});
