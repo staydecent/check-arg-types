@@ -6,14 +6,15 @@ var toType = function(val) {
 var checkArgTypes = function(args, types) {
   args = Array.prototype.slice.call(args);
 
-  var len = args.length;
-  var x = 0;
   var givenType;
   var expectedType;
 
-  while (x < len) {
+  for (var x = 0, len = args.length; x < len; ++x) {
     givenType = toType(args[x]);
     expectedType = types[x];
+    if (expectedType === '-any') {
+      continue;
+    }
 
     if (toType(expectedType) === 'array') {
       var accepted = false;
@@ -29,8 +30,6 @@ var checkArgTypes = function(args, types) {
         throw new TypeError("Expected '"+expectedType+"' given '"+givenType+"' for argument at index "+x);
       }
     }
-
-    x++;
   }
 };
 

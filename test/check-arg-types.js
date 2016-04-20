@@ -53,3 +53,35 @@ test('checkArgTypes w/ multiple allowed types should pass', function(t) {
 var funcAllowAnyType = function() {
   checkArgTypes(arguments, ['string', '-any', 'number']);
 };
+
+test('checkArgTypes can skip arguments checking', function(t) {
+  t.plan(6);
+
+  try {
+    funcAllowAnyType('one', undefined, 4);
+    t.ok(true, 'undefined for any');
+
+    funcAllowAnyType('one', null, 4);
+    t.ok(true, 'null for any');
+
+    funcAllowAnyType('one', 'second', 4);
+    t.ok(true, 'string for any');
+
+    funcAllowAnyType('one', 1, 4);
+    t.ok(true, 'number for any');
+
+    funcAllowAnyType('one', {}, 4);
+    t.ok(true, 'object for any');
+  } catch (e) {
+  }
+
+  var didThrow = false;
+  try {
+    funcAllowAnyType(1, 'second', 1, 4);
+  } catch (e) {
+    didThrow = true;
+  }
+  t.equal(true, didThrow, 'thrown');
+
+  t.end();
+});
