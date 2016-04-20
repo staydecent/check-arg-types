@@ -22,7 +22,7 @@ var checkArgTypes = function(args, types) {
         accepted = accepted || (givenType === expectedType[p]);
       }
       if (!accepted) {
-        throw new TypeError("Expected one of ["+expectedType.join(',')+"] given '"+givenType+"' for argument at index "+x);
+        throw new TypeError("Expected one of ["+expectedType.join(', ')+"] given '"+givenType+"' for argument at index "+x);
       }
     }
     else {
