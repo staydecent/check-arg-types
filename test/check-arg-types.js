@@ -22,3 +22,34 @@ test('checkArgTypes should throw', function(t) {
   t.equal(true, didThrow, 'thrown');
 });
 
+var funcAllowedMultipleTypes = function() {
+  checkArgTypes(arguments, [['number', 'string'], 'string']);
+};
+
+test('checkArgTypes w/ multiple allowed types should pass', function(t) {
+  t.plan(3);
+
+  try {
+    funcAllowedMultipleTypes(1, 'second');
+    t.ok(true, 'number passed');
+
+    funcAllowedMultipleTypes('1', 'second');
+    t.ok(true, 'string passed');
+  } catch (e) {
+  }
+
+  var didThrow = false;
+  try {
+    funcAllowedMultipleTypes({}, 'second');
+  } catch (e) {
+    didThrow = true;
+  }
+  t.equal(true, didThrow, 'thrown');
+
+  t.end();
+});
+
+
+var funcAllowAnyType = function() {
+  checkArgTypes(arguments, ['string', '-any', 'number']);
+};
