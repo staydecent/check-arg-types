@@ -4,6 +4,8 @@
   "description": "Pass in `arguments` and an array of the expected types (as string descriptions) and throw if they don't match.",
   "main": "index.js",
   "scripts": {
+    "std": "standard --verbose | snazzy",
+    "pretest": "npm run std",
     "test": "tape test/*.js | faucet"
   },
   "repository": {
@@ -26,6 +28,8 @@
   "homepage": "https://github.com/staydecent/check-arg-types#readme",
   "devDependencies": {
     "faucet": "0.0.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2",
     "tape": "^4.0.3"
   }
 }
