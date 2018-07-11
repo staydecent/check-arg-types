@@ -1,9 +1,9 @@
-var toType = function (val) {
+export const toType = function (val) {
   var str = ({}).toString.call(val)
   return str.toLowerCase().slice(8, -1)
 }
 
-var checkArgTypes = function (args, types) {
+export default function checkArgTypes (args, types) {
   args = Array.prototype.slice.call(args)
 
   var givenType
@@ -32,6 +32,5 @@ var checkArgTypes = function (args, types) {
   }
 }
 
+// For backwards compatibility (<= 1.1.0)
 checkArgTypes.prototype.toType = toType
-
-module.exports = checkArgTypes

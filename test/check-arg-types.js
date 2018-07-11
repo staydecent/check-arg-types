@@ -1,4 +1,4 @@
-var checkArgTypes = require('../')
+var checkArgTypes = require('../dist/check-arg-types')
 var test = require('tape')
 
 var func = function (a, b, c, d, e, f) {
