@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/staydecent/check-arg-types.svg?branch=master)](https://travis-ci.org/staydecent/check-arg-types)
 
-Pass in `arguments` and an array of the expected types (as string descriptions) and throw if they don't match.
+Pass in `arguments` and an array of the expected types (as string descriptions) and throw if they don't match. Simple to adopt and only ~320 bytes.
 
 ```javascript
 function test(a, b, c) {
