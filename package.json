@@ -8,7 +8,7 @@
   "scripts": {
     "build": "microbundle",
     "prepublishOnly": "npm run build",
-    "pretest": "standard --verbose | snazzy",
+    "pretest": "npm run build && standard --verbose | snazzy",
     "test": "tape test/*.js | faucet"
   },
   "standard": {
