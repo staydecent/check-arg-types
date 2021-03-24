@@ -4,11 +4,12 @@
   "description": "Pass in `arguments` and an array of the expected types (as string descriptions) and throw if they don't match.",
   "main": "dist/check-arg-types.js",
   "module": "dist/check-arg-types.m.js",
-  "source": "index.js",
+  "source": "src/check-arg-types.js",
   "scripts": {
-    "build": "microbundle",
+    "prebuild": "prettier --write src/ test/",
+    "build": "microbundle --no-compress",
     "prepublishOnly": "npm run build",
-    "pretest": "npm run build && standard --verbose | snazzy",
+    "pretest": "npm run build",
     "test": "tape test/*.js | faucet"
   },
   "standard": {
@@ -40,9 +41,8 @@
   "homepage": "https://github.com/staydecent/check-arg-types#readme",
   "devDependencies": {
     "faucet": "0.0.1",
-    "microbundle": "^0.5.1",
-    "snazzy": "^7.0.0",
-    "standard": "^11.0.1",
-    "tape": "^4.0.3"
+    "microbundle": "^0.13.0",
+    "prettier": "^2.2.1",
+    "tape": "^5.2.2"
   }
 }
