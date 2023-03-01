@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/staydecent/check-arg-types#readme",
   "devDependencies": {
-    "faucet": "0.0.1",
+    "faucet": "0.0.4",
     "microbundle": "^0.13.0",
     "prettier": "^2.2.1",
     "tape": "^5.2.2"
