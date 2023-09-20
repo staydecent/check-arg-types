@@ -28,7 +28,7 @@ export function checkArgTypes(args, types) {
             "] given '" +
             givenType +
             "' for argument at index " +
-            x
+            x,
         );
       }
     } else {
@@ -39,7 +39,7 @@ export function checkArgTypes(args, types) {
             "' given '" +
             givenType +
             "' for argument at index " +
-            x
+            x,
         );
       }
     }
